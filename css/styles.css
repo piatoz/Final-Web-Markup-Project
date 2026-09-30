@@ -1,0 +1,31 @@
+/* add all items from grading group 3 and 4. Search for items in group 5 that refer to css f.e. z index */ 
+
+
+
+body{
+    background-color: #111111;
+    color: white;
+}
+
+.main-header{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 25px;
+    font-size: 60px;
+}
+
+.home-page-box {
+    display: flex;
+    width: 900px;
+    height: 400px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: right;
+    margin: auto;
+    font-size: 35px;
+    padding: 50px;
+    ju
+}
