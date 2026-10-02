@@ -1,11 +1,12 @@
 /* add all items from grading group 3 and 4. Search for items in group 5 that refer to css f.e. z index */ 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
     background-color: #111111;
     color: white;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
+    margin: 20px;
+    padding: 20px;
 }
 
 .main-header{
@@ -16,17 +17,12 @@ body{
     font-size: 60px;
 }
 
-.home-page-box {
+.big-heading {
     display: flex;
-    width: 900px;
-    height: 400px;
     background-color: transparent;
-    border: 2px solid white;
-    border-radius: 12px;
     align-items: center;
-    justify-content: right;
+    justify-content: left;
     margin: auto;
     font-size: 35px;
     padding: 50px;
-    ju
 }
