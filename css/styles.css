@@ -1,31 +1,417 @@
 /* add all items from grading group 3 and 4. Search for items in group 5 that refer to css f.e. z index */ 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
-body{
-    background-color: #FAF6EF;
-    color: #2B2A28;
-    font-family: "Inter", sans-serif;
-    margin: 20px;
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding-bottom: 4rem;
+	background-color: #FAF6EF;
+	color: #2B2A28;
+	font-family: "Inter", sans-serif;
+	line-height: 1.5;
+}
+
+/* ---------- Links ---------- */
+
+/* Mouse is over a link */
+a:hover {
+	color: #F4A97F;
+}
+
+/* Link is being clicked or selected with the keyboard */
+a:active,
+a:focus {
+	color: #D9763F;
+}
+
+/* ---------- Header and nav ---------- */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #2B2A28;
+}
+
+.logo {
+	margin: 0;
+	font-family: "Roboto Slab", serif;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+nav a {
+	margin-left: 2rem;
+	color: #2B2A28;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+/* The link of the current page (Home) */
+nav a[aria-current="page"] {
+	color: #F4A97F;
+	text-decoration: underline;
+}
+
+/* ---------- Hero (green banner) ---------- */
+
+.home-top {
+	padding: 4rem 2rem;
+	background-color: #2F5D50;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.main-header {
+	margin: 0;
+	font-family: "Roboto Slab", serif;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.second-header-home {
+	max-width: 700px;
+	margin: 1rem auto 0;
+	font-size: 1.5rem;
+}
+
+/* ---------- Intro text ---------- */
+
+.intro {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 3rem 2rem;
+	font-size: 1.3rem;
+	line-height: 1.8;
+	text-indent: 2rem;
+	word-spacing: 2px;
+}
+
+/* ---------- Sections ---------- */
+
+.learn,
+.why,
+.gallery,
+.contact {
+	padding: 3rem 2rem;
+	text-align: center;
+}
+
+.learn,
+.gallery {
+	background-color: #FBE3D5;
+}
+
+/* All section titles look the same */
+.learn h2,
+.why h2,
+.gallery h2,
+.contact h2 {
+	margin-top: 0;
+	margin-bottom: 2rem;
+	color: #2F5D50;
+	font-family: "Roboto Slab", serif;
+	font-size: 2rem;
+}
+
+/* Lists with no bullets, placed in a row */
+.cards,
+.benefits,
+.photos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.cards li,
+.benefits li,
+.photos li {
+	flex: 1;
+	min-width: 200px;
+}
+
+/* ---------- Cards (What you'll learn) ---------- */
+
+.cards li {
+	display: flex;
+}
+
+.card {
+	flex: 1;
+	padding: 20px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #2F5D50;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+	text-align: left;
+}
+
+.card-number {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 0;
+	border-radius: 50%;
+	background-color: #F4A97F;
+	text-align: center;
+	line-height: 24px;
+}
+
+.card h3 {
+	color: #2F5D50;
+}
+
+.card a {
+	color: #2F5D50;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+/* ---------- Why XM5 Guide ---------- */
+
+.icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: #F4A97F;
+}
+
+.icon img {
+	width: 24px;
+	height: 24px;
+}
+
+.benefits h3 {
+	color: #2F5D50;
+}
+
+/* ---------- Gallery ---------- */
+
+.photos figure {
+	margin: 0;
+	text-align: left;
+}
+
+.photos img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 310 / 272;
+	object-fit: cover;
+	border-radius: 12px;
+	background-color: #6B6B6B;
+}
+
+.photos figcaption {
+	margin-top: 0.5rem;
+	font-weight: 600;
+    font-size: 1rem;
+}
+
+/* ---------- Detail sections ---------- */
+
+/* OVERVIEW */
+
+.detail {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 3rem 2rem;
+}
+
+.detail h2 {
+	color: #2F5D50;
+	font-family: "Roboto Slab", serif;
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sections h3 {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.section-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
     padding: 20px;
+    border-radius: 8px;
+    background-color: #FBE3D5;
 }
 
-.main-header{
-    display: flex;
-    margin: auto;
-    justify-content: left;
-    padding: 25px;
-    font-size: 45px;
-    font-family: "Roboto Slab", sans-serif;
-    font-weight: bold;
+.section-card img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-.second-header-home{
-    display: flex;
-    margin: auto;
-    padding: 25px;
-    font-size: 25px;
-    justify-content: left;
-    align-items: center;
-    font-family: "Inter", sans-serif;
+.section-card figure {
+    margin: auto 0 0;
+}
+
+.section-card figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.lens-info {
+    margin-top: 2rem;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #2F5D50;
+    color: #FFFFFF;
+}
+
+.lens-info h3 {
+    margin-top: 0;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.8rem;
+}
+
+.lens-types {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin: 1.5rem 0;
+	padding: 0;
+	list-style: none;
+}
+
+.lens-types li {
+	display: flex;
+	flex: 1;
+	min-width: 250px;
+}
+
+.lens-card {
+	flex: 1;
+	padding: 1rem 1.25rem;
+	border-radius: 15px;
+	background-color: #FAF6EF;
+	color: #2B2A28;
+}
+
+.lens-card h4 {
+	margin: 0 0 0.5rem;
+	color: #2F5D50;
+	font-size: 1.1rem;
+}
+
+.lens-card p {
+	margin: 0;
+}
+
+/* ---------- Contact form ---------- */
+
+form {
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+fieldset {
+	padding: 20px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #2F5D50;
+	border-radius: 8px;
+}
+
+legend {
+	color: #2F5D50;
+	font-weight: 600;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+input[type="email"] {
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 10px;
+}
+
+input[type="submit"] {
+	padding: 10px 25px;
+	border-style: none;
+	background-color: #2F5D50;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #F4A97F;
+	color: #2B2A28;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+	padding: 1.5rem 0;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #2B2A28;
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
+}
+
+/* Stays at the bottom of the screen, on top of everything */
+.cookies {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	padding: 0.75rem;
+	background-color: #2F5D50;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.cookies p {
+	margin: 0;
+}
+
+
+
+/* PC: wider than 768px */
+@media (min-width: 769px) {
+	header,
+	.home-top,
+	.learn,
+	.why,
+	.gallery,
+	.contact {
+		padding-right: 2.5rem;
+		padding-left: 2.5rem;
+	}
 }
